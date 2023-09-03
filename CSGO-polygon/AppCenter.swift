@@ -21,10 +21,6 @@ class AppCenter{
     func setRootController(_ controller: UIViewController) -> Void {
         window.rootViewController = controller
     }
-    //    func navigateToCreateEvent() {
-    //        let vc = CreateEventWelcomeController().inNavigation()
-    //        setRootController(vc)
-    //    }
     func makeRootController() -> Void {
         let vc = MainPageViewController().inNavigation()
         setRootController(vc)
