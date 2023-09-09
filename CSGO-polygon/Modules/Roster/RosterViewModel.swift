@@ -1,12 +1,12 @@
 import Foundation
 
-protocol MainPageViewModelLogic: AnyObject {
+protocol RosterViewModelLogic: AnyObject {
     func fetchPlayers()
 
     var players: Observable<[Players]> {get}
 }
 
-final class MainPageViewModel: MainPageViewModelLogic {
+final class RosterViewModel: RosterViewModelLogic {
     
     //MARK: - Binding Values
     var players: Observable<[Players]>  = Observable([])

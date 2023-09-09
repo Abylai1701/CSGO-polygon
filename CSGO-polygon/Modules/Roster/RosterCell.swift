@@ -1,7 +1,8 @@
 import UIKit
 import SnapKit
+import Kingfisher
 
-class BotOfWeekeendCell: UITableViewCell {
+class RosterCell: UITableViewCell {
     
     private lazy var containerView: UIView = {
         let view = UIView()
@@ -11,14 +12,14 @@ class BotOfWeekeendCell: UITableViewCell {
         view.backgroundColor = .clear
         return view
     }()
-
+    
     private lazy var coverImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "Tima")
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return view
     }()
     
@@ -27,10 +28,10 @@ class BotOfWeekeendCell: UITableViewCell {
         view.image = UIImage(named: "level1")
         view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
-
+        
         return view
     }()
-
+    
     private lazy var nick: UILabel = {
         let label = UILabel()
         label.text = "Kyojin"
@@ -44,7 +45,7 @@ class BotOfWeekeendCell: UITableViewCell {
         view.image = UIImage(named: "awp")
         view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
-
+        
         return view
     }()
     
@@ -64,14 +65,14 @@ class BotOfWeekeendCell: UITableViewCell {
         selectionStyle = .none
         
         let overlayView = UIView()
-        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         overlayView.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(containerView)
         containerView.addSubview(coverImageView)
         containerView.addSubview(overlayView)
         containerView.addSubviews(level, nick, role)
-
+        
         containerView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -98,44 +99,26 @@ class BotOfWeekeendCell: UITableViewCell {
             make.width.height.equalTo(50)
         }
     }
-
+    
     
     func configure(model: Players) {
-        if model.imgUrl != nil {
-            coverImageView.kf.setImage(with: model.imgUrl?.url)
-        }
-        else {
+        nick.text = model.nick
+        
+        if let imageUrlString = model.img, let imageUrl = URL(string: imageUrlString) {
+            coverImageView.kf.setImage(with: imageUrl)
+        } else {
             coverImageView.image = UIImage(named: "tima")
         }
         
-        if model.level == 1 {
-            level.image = UIImage(named: "level1")
-        }else if model.level == 2 {
-            level.image = UIImage(named: "level2")
-        }else if model.level == 3 {
-            level.image = UIImage(named: "level3")
-        }else if model.level == 4 {
-            level.image = UIImage(named: "level4")
-        }else if model.level == 5 {
-            level.image = UIImage(named: "level5")
-        }else if model.level == 6 {
-            level.image = UIImage(named: "level6")
-        }else if model.level == 7 {
-            level.image = UIImage(named: "level7")
-        }else if model.level == 8 {
-            level.image = UIImage(named: "level8")
-        }else if model.level == 9 {
-            level.image = UIImage(named: "level9")
-        }else if model.level == 10 {
-            level.image = UIImage(named: "level10")
-        }else{
-            level.image = UIImage(named: "level1")
-        }
+        level.image = UIImage(named: "level\(model.level)") ?? UIImage(named: "level1")
         
-        if model.role == 1 {
+        switch model.role {
+        case 1:
             role.image = UIImage(named: "ak")
-        }else if model.role == 2 {
+        case 2:
             role.image = UIImage(named: "awp")
+        default:
+            role.image = nil
         }
     }
 }

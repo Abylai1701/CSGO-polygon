@@ -22,8 +22,8 @@ class AppCenter{
         window.rootViewController = controller
     }
     func makeRootController() -> Void {
-        let vc = MainPageViewController().inNavigation()
+        let vc = TabBarController().inNavigation()
         setRootController(vc)
-    }
+    }    
 }
 

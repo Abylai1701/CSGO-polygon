@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6DC9B436A51EB645FE4EF300 /* Pods_CSGO_polygon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001930A220D01D462B1D5807 /* Pods_CSGO_polygon.framework */; };
+		758021C02AABE4A90094802F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021BF2AABE4A90094802F /* TabBarController.swift */; };
+		758021C32AABEBCC0094802F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C22AABEBCC0094802F /* NewsViewController.swift */; };
+		758021C62AABECA70094802F /* RakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C52AABECA70094802F /* RakCell.swift */; };
+		758021C82AABEEFD0094802F /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C72AABEEFD0094802F /* RosterViewController.swift */; };
 		75B199EC2AA105F5008FD945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B199EB2AA105F5008FD945 /* AppDelegate.swift */; };
-		75B199F02AA105F5008FD945 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B199EF2AA105F5008FD945 /* MainPageViewController.swift */; };
 		75B199F62AA105F5008FD945 /* CSGO_polygon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75B199F42AA105F5008FD945 /* CSGO_polygon.xcdatamodeld */; };
 		75B199F82AA105F7008FD945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B199F72AA105F7008FD945 /* Assets.xcassets */; };
 		75B199FB2AA105F7008FD945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B199F92AA105F7008FD945 /* LaunchScreen.storyboard */; };
@@ -21,9 +24,9 @@
 		75B19A102AA108A4008FD945 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19A0F2AA108A4008FD945 /* Router.swift */; };
 		75B19A122AA108C8008FD945 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19A112AA108C8008FD945 /* FileHelper.swift */; };
 		75FCE47F2AA2898600A53774 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE47E2AA2898600A53774 /* Extensions.swift */; };
-		75FCE4812AA28A9000A53774 /* MainPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4802AA28A9000A53774 /* MainPageCell.swift */; };
+		75FCE4812AA28A9000A53774 /* RosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4802AA28A9000A53774 /* RosterCell.swift */; };
 		75FCE4832AA28C0D00A53774 /* Loopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4822AA28C0D00A53774 /* Loopable.swift */; };
-		75FCE4892AA369B600A53774 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4882AA369B600A53774 /* MainPageViewModel.swift */; };
+		75FCE4892AA369B600A53774 /* RosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4882AA369B600A53774 /* RosterViewModel.swift */; };
 		75FCE48B2AA36A0500A53774 /* PlayersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE48A2AA36A0500A53774 /* PlayersModel.swift */; };
 		75FCE4DF2AA3A4F900A53774 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4CE2AA3A4F900A53774 /* Enums.swift */; };
 		75FCE4E12AA3A4F900A53774 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCE4D02AA3A4F900A53774 /* ColorsConstants.swift */; };
@@ -67,9 +70,12 @@
 /* Begin PBXFileReference section */
 		001930A220D01D462B1D5807 /* Pods_CSGO_polygon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGO_polygon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		344E095B32BAE2FACEE88935 /* Pods-CSGO-polygon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO-polygon.release.xcconfig"; path = "Target Support Files/Pods-CSGO-polygon/Pods-CSGO-polygon.release.xcconfig"; sourceTree = "<group>"; };
+		758021BF2AABE4A90094802F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		758021C22AABEBCC0094802F /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		758021C52AABECA70094802F /* RakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakCell.swift; sourceTree = "<group>"; };
+		758021C72AABEEFD0094802F /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
 		75B199E82AA105F5008FD945 /* CSGO-polygon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSGO-polygon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B199EB2AA105F5008FD945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75B199EF2AA105F5008FD945 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		75B199F52AA105F5008FD945 /* CSGO_polygon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CSGO_polygon.xcdatamodel; sourceTree = "<group>"; };
 		75B199F72AA105F7008FD945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75B199FA2AA105F7008FD945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,9 +88,9 @@
 		75B19A0F2AA108A4008FD945 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		75B19A112AA108C8008FD945 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		75FCE47E2AA2898600A53774 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		75FCE4802AA28A9000A53774 /* MainPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageCell.swift; sourceTree = "<group>"; };
+		75FCE4802AA28A9000A53774 /* RosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCell.swift; sourceTree = "<group>"; };
 		75FCE4822AA28C0D00A53774 /* Loopable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loopable.swift; sourceTree = "<group>"; };
-		75FCE4882AA369B600A53774 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		75FCE4882AA369B600A53774 /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
 		75FCE48A2AA36A0500A53774 /* PlayersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersModel.swift; sourceTree = "<group>"; };
 		75FCE4CE2AA3A4F900A53774 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		75FCE4D02AA3A4F900A53774 /* ColorsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsConstants.swift; sourceTree = "<group>"; };
@@ -145,6 +151,31 @@
 				344E095B32BAE2FACEE88935 /* Pods-CSGO-polygon.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		758021BE2AABE48F0094802F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				758021BF2AABE4A90094802F /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		758021C12AABEBBB0094802F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				758021C22AABEBCC0094802F /* NewsViewController.swift */,
+				758021C42AABEC320094802F /* Cell */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		758021C42AABEC320094802F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				758021C52AABECA70094802F /* RakCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		75B199DF2AA105F4008FD945 = {
@@ -209,20 +240,22 @@
 		75B19A152AA109A7008FD945 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				75B19A162AA109BA008FD945 /* MainPage */,
+				758021C12AABEBBB0094802F /* News */,
+				758021BE2AABE48F0094802F /* TabBar */,
+				75B19A162AA109BA008FD945 /* Roster */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		75B19A162AA109BA008FD945 /* MainPage */ = {
+		75B19A162AA109BA008FD945 /* Roster */ = {
 			isa = PBXGroup;
 			children = (
-				75B199EF2AA105F5008FD945 /* MainPageViewController.swift */,
-				75FCE4802AA28A9000A53774 /* MainPageCell.swift */,
-				75FCE4882AA369B600A53774 /* MainPageViewModel.swift */,
+				75FCE4802AA28A9000A53774 /* RosterCell.swift */,
+				75FCE4882AA369B600A53774 /* RosterViewModel.swift */,
 				75FCE48A2AA36A0500A53774 /* PlayersModel.swift */,
+				758021C72AABEEFD0094802F /* RosterViewController.swift */,
 			);
-			path = MainPage;
+			path = Roster;
 			sourceTree = "<group>";
 		};
 		75FCE4CC2AA3A4F900A53774 /* Core */ = {
@@ -491,7 +524,7 @@
 				75FCE5072AA5002F00A53774 /* SecondaryButton.swift in Sources */,
 				75B199F62AA105F5008FD945 /* CSGO_polygon.xcdatamodeld in Sources */,
 				75FCE5232AA5003F00A53774 /* NetworkRouter.swift in Sources */,
-				75FCE4812AA28A9000A53774 /* MainPageCell.swift in Sources */,
+				75FCE4812AA28A9000A53774 /* RosterCell.swift in Sources */,
 				75FCE4E22AA3A4F900A53774 /* FontConstants.swift in Sources */,
 				75FCE4E12AA3A4F900A53774 /* ColorsConstants.swift in Sources */,
 				75FCE5062AA5002F00A53774 /* ContainsButton.swift in Sources */,
@@ -503,18 +536,19 @@
 				75FCE5262AA5003F00A53774 /* NetworkManager.swift in Sources */,
 				75FCE5082AA5002F00A53774 /* BaseButton.swift in Sources */,
 				75FCE4DF2AA3A4F900A53774 /* Enums.swift in Sources */,
+				758021C32AABEBCC0094802F /* NewsViewController.swift in Sources */,
 				75FCE5292AA5003F00A53774 /* Parser.swift in Sources */,
 				75FCE5242AA5003F00A53774 /* NetworkResponse.swift in Sources */,
 				75B19A102AA108A4008FD945 /* Router.swift in Sources */,
 				75B19A0A2AA10761008FD945 /* UserManager.swift in Sources */,
-				75FCE4892AA369B600A53774 /* MainPageViewModel.swift in Sources */,
+				75FCE4892AA369B600A53774 /* RosterViewModel.swift in Sources */,
 				75FCE47F2AA2898600A53774 /* Extensions.swift in Sources */,
 				75FCE5092AA5002F00A53774 /* CodeView.swift in Sources */,
 				75FCE5132AA5002F00A53774 /* DoubledSlider.swift in Sources */,
 				75FCE50B2AA5002F00A53774 /* BaseController.swift in Sources */,
 				75B19A122AA108C8008FD945 /* FileHelper.swift in Sources */,
+				758021C02AABE4A90094802F /* TabBarController.swift in Sources */,
 				75FCE50A2AA5002F00A53774 /* BaseTextField.swift in Sources */,
-				75B199F02AA105F5008FD945 /* MainPageViewController.swift in Sources */,
 				75B199EC2AA105F5008FD945 /* AppDelegate.swift in Sources */,
 				75FCE5252AA5003F00A53774 /* Result.swift in Sources */,
 				75FCE5142AA5002F00A53774 /* CheckBox.swift in Sources */,
@@ -522,6 +556,8 @@
 				75FCE52B2AA5003F00A53774 /* Endpoints.swift in Sources */,
 				75FCE50C2AA5002F00A53774 /* DynamicSizeTableView.swift in Sources */,
 				75FCE5272AA5003F00A53774 /* Response.swift in Sources */,
+				758021C82AABEEFD0094802F /* RosterViewController.swift in Sources */,
+				758021C62AABECA70094802F /* RakCell.swift in Sources */,
 				75B19A0C2AA10811008FD945 /* ApiRoutes.swift in Sources */,
 				75FCE5122AA5002F00A53774 /* RTLCollectionViewFlowLayout.swift in Sources */,
 				75FCE52C2AA5003F00A53774 /* ParseManager.swift in Sources */,

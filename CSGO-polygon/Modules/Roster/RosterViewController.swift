@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 import SnapKit
 
-class MainPageViewController: BaseController {
+class RosterViewController: BaseController {
     
-    private let viewModel: MainPageViewModelLogic = MainPageViewModel()
+    private let viewModel: RosterViewModelLogic = RosterViewModel()
     private var players: [Players] = []
     
     private lazy var  mainLabel : UILabel = {
@@ -22,8 +22,8 @@ class MainPageViewController: BaseController {
         table.dataSource = self
         table.backgroundColor = .clear
         table.showsVerticalScrollIndicator = false
-        table.register(BotOfWeekeendCell.self,
-                       forCellReuseIdentifier: BotOfWeekeendCell.cellId)
+        table.register(RosterCell.self,
+                       forCellReuseIdentifier: RosterCell.cellId)
         return table
     }()
 
@@ -45,7 +45,7 @@ class MainPageViewController: BaseController {
         }
     }
     private func setupViews(){
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = .black
         view.addSubviews(mainLabel,
                          tableView)
         
@@ -64,14 +64,14 @@ class MainPageViewController: BaseController {
     }
 }
 
-extension MainPageViewController:UITableViewDelegate , UITableViewDataSource{
+extension RosterViewController:UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -85,8 +85,8 @@ extension MainPageViewController:UITableViewDelegate , UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BotOfWeekeendCell.cellId, for: indexPath) as! BotOfWeekeendCell
-//        cell.configure(model: players[indexPath.section])
+        let cell = tableView.dequeueReusableCell(withIdentifier: RosterCell.cellId, for: indexPath) as! RosterCell
+        cell.configure(model: players[indexPath.section])
         return cell
     }
 }
