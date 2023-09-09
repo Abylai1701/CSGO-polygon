@@ -16,7 +16,7 @@ class AppCenter{
     }
     private func makeKeyAndVisible() -> Void {
         window.makeKeyAndVisible()
-        window.backgroundColor = .white
+        window.backgroundColor = .black
     }
     func setRootController(_ controller: UIViewController) -> Void {
         window.rootViewController = controller

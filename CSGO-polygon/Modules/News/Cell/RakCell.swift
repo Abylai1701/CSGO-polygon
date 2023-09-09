@@ -27,7 +27,7 @@ class RakCell: UITableViewCell {
         let label = UILabel()
         label.text = "Kyojin"
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = UIFont.systemFont(ofSize: 36)
         return label
     }()
     

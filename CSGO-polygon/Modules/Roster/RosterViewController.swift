@@ -45,7 +45,7 @@ class RosterViewController: BaseController {
         }
     }
     private func setupViews(){
-        view.backgroundColor = .black
+        view.backgroundColor = .backgroundColor
         view.addSubviews(mainLabel,
                          tableView)
         

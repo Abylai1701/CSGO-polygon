@@ -1,33 +1,27 @@
+import Foundation
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let news = NewsViewController()
+        news.tabBarItem = UITabBarItem.init(title: "", image: UIImage(named: "news"), tag: 0)
+        
         let roster = RosterViewController()
+        roster.tabBarItem = UITabBarItem.init(title: "", image: #imageLiteral(resourceName: "roster"), tag: 1)
+        
         let cs = RosterViewController()
+        cs.tabBarItem = UITabBarItem.init(title: "", image: #imageLiteral(resourceName: "cs"), tag: 2)
         
-        news.tabBarItem = UITabBarItem(title: "Новости", image: nil, tag: 0)
-        roster.tabBarItem = UITabBarItem(title: "Состав", image: nil, tag: 1)
-        cs.tabBarItem = UITabBarItem(title: "Тренировки", image: nil, tag: 2)
-        
-        let fontSize: CGFloat = 20.0
-        
-        news.tabBarItem.title = "Новости"
-        news.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize)], for: .normal)
-        
-        roster.tabBarItem.title = "Состав"
-        roster.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize)], for: .normal)
-        
-        cs.tabBarItem.title = "Тренировки"
-        cs.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: fontSize)], for: .normal)
         
         self.tabBar.tintColor = .blueColor
         self.tabBar.unselectedItemTintColor = .white
-        self.tabBar.backgroundColor = .clear
+        self.tabBar.barTintColor = .blueColor
+        self.tabBar.backgroundColor = .backgroundColor
+        self.tabBar.isTranslucent = false
+        UITabBar.appearance().barTintColor = .backgroundColor
         self.viewControllers = [news, roster, cs]
     }
 }
