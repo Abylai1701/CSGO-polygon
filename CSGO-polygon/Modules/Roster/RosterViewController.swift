@@ -15,6 +15,14 @@ class RosterViewController: BaseController {
         return label
     }()
     
+    private lazy var coverImageView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "example_image")
+        view.contentMode = .scaleAspectFill
+        view.layer.masksToBounds = true
+        return view
+    }()
+    
     private lazy var tableView: UITableView = {
         let table = UITableView()
         table.separatorStyle = .none
@@ -47,6 +55,7 @@ class RosterViewController: BaseController {
     private func setupViews(){
         view.backgroundColor = .backgroundColor
         view.addSubviews(mainLabel,
+                         coverImageView,
                          tableView)
         
         mainLabel.snp.makeConstraints { make in
@@ -54,7 +63,10 @@ class RosterViewController: BaseController {
             make.left.equalToSuperview().offset(24)
             make.right.lessThanOrEqualToSuperview().offset(-24)
         }
-
+        coverImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(24)
+            make.right.equalToSuperview().offset(-24)
+        }
         tableView.snp.makeConstraints { make in
             make.top.equalTo(mainLabel.snp.bottom)
             make.bottom.equalToSuperview()

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6DC9B436A51EB645FE4EF300 /* Pods_CSGO_polygon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001930A220D01D462B1D5807 /* Pods_CSGO_polygon.framework */; };
+		754855222AB24F94002FF82B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754855212AB24F94002FF82B /* NewsModel.swift */; };
+		754855242AB250E3002FF82B /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754855232AB250E3002FF82B /* NewsViewModel.swift */; };
 		758021C02AABE4A90094802F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021BF2AABE4A90094802F /* TabBarController.swift */; };
 		758021C32AABEBCC0094802F /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C22AABEBCC0094802F /* NewsViewController.swift */; };
-		758021C62AABECA70094802F /* RakCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C52AABECA70094802F /* RakCell.swift */; };
+		758021C62AABECA70094802F /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C52AABECA70094802F /* NewsCell.swift */; };
 		758021C82AABEEFD0094802F /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758021C72AABEEFD0094802F /* RosterViewController.swift */; };
 		75B199EC2AA105F5008FD945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B199EB2AA105F5008FD945 /* AppDelegate.swift */; };
 		75B199F62AA105F5008FD945 /* CSGO_polygon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75B199F42AA105F5008FD945 /* CSGO_polygon.xcdatamodeld */; };
@@ -70,9 +72,11 @@
 /* Begin PBXFileReference section */
 		001930A220D01D462B1D5807 /* Pods_CSGO_polygon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSGO_polygon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		344E095B32BAE2FACEE88935 /* Pods-CSGO-polygon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSGO-polygon.release.xcconfig"; path = "Target Support Files/Pods-CSGO-polygon/Pods-CSGO-polygon.release.xcconfig"; sourceTree = "<group>"; };
+		754855212AB24F94002FF82B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		754855232AB250E3002FF82B /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		758021BF2AABE4A90094802F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		758021C22AABEBCC0094802F /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		758021C52AABECA70094802F /* RakCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakCell.swift; sourceTree = "<group>"; };
+		758021C52AABECA70094802F /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		758021C72AABEEFD0094802F /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
 		75B199E82AA105F5008FD945 /* CSGO-polygon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSGO-polygon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B199EB2AA105F5008FD945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		754855202AB24F1B002FF82B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				754855212AB24F94002FF82B /* NewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		758021BE2AABE48F0094802F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				758021C22AABEBCC0094802F /* NewsViewController.swift */,
+				754855232AB250E3002FF82B /* NewsViewModel.swift */,
+				754855202AB24F1B002FF82B /* Model */,
 				758021C42AABEC320094802F /* Cell */,
 			);
 			path = News;
@@ -173,7 +187,7 @@
 		758021C42AABEC320094802F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				758021C52AABECA70094802F /* RakCell.swift */,
+				758021C52AABECA70094802F /* NewsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -545,6 +559,7 @@
 				75FCE47F2AA2898600A53774 /* Extensions.swift in Sources */,
 				75FCE5092AA5002F00A53774 /* CodeView.swift in Sources */,
 				75FCE5132AA5002F00A53774 /* DoubledSlider.swift in Sources */,
+				754855222AB24F94002FF82B /* NewsModel.swift in Sources */,
 				75FCE50B2AA5002F00A53774 /* BaseController.swift in Sources */,
 				75B19A122AA108C8008FD945 /* FileHelper.swift in Sources */,
 				758021C02AABE4A90094802F /* TabBarController.swift in Sources */,
@@ -557,10 +572,11 @@
 				75FCE50C2AA5002F00A53774 /* DynamicSizeTableView.swift in Sources */,
 				75FCE5272AA5003F00A53774 /* Response.swift in Sources */,
 				758021C82AABEEFD0094802F /* RosterViewController.swift in Sources */,
-				758021C62AABECA70094802F /* RakCell.swift in Sources */,
+				758021C62AABECA70094802F /* NewsCell.swift in Sources */,
 				75B19A0C2AA10811008FD945 /* ApiRoutes.swift in Sources */,
 				75FCE5122AA5002F00A53774 /* RTLCollectionViewFlowLayout.swift in Sources */,
 				75FCE52C2AA5003F00A53774 /* ParseManager.swift in Sources */,
+				754855242AB250E3002FF82B /* NewsViewModel.swift in Sources */,
 				75FCE4832AA28C0D00A53774 /* Loopable.swift in Sources */,
 				75B19A032AA106C4008FD945 /* AppCenter.swift in Sources */,
 				75FCE48B2AA36A0500A53774 /* PlayersModel.swift in Sources */,
@@ -708,6 +724,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CSGO-polygon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -736,6 +753,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CSGO-polygon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

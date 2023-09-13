@@ -7,13 +7,16 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
         
         let news = NewsViewController()
-        news.tabBarItem = UITabBarItem.init(title: "", image: UIImage(named: "news"), tag: 0)
-        
+        let newsImage = UIImage(named: "news")?.withRenderingMode(.alwaysOriginal).resizeImage(targetSize: CGSize(width: 30, height: 30))
+        news.tabBarItem = UITabBarItem(title: "Новости", image: newsImage, tag: 0)
+
         let roster = RosterViewController()
-        roster.tabBarItem = UITabBarItem.init(title: "", image: #imageLiteral(resourceName: "roster"), tag: 1)
-        
+        let rosterImage = UIImage(named: "roster")?.withRenderingMode(.alwaysOriginal).resizeImage(targetSize: CGSize(width: 30, height: 30))
+        roster.tabBarItem = UITabBarItem(title: "Состав", image: rosterImage, tag: 1)
+
         let cs = RosterViewController()
-        cs.tabBarItem = UITabBarItem.init(title: "", image: #imageLiteral(resourceName: "cs"), tag: 2)
+        let csImage = UIImage(named: "cs")?.withRenderingMode(.alwaysOriginal).resizeImage(targetSize: CGSize(width: 30, height: 30))
+        cs.tabBarItem = UITabBarItem(title: "Гайды", image: csImage, tag: 2)
         
         
         self.tabBar.tintColor = .blueColor
